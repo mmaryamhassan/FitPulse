@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">FitPulse</a>
+            <button>Start Today</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="landingpg-section">
+            <div class="landingpg-content">
+                <h1>Pulse Up Your Progress!</h1>
+                <p>Join FitPulse today and unlock top-tier fitness tools to power your journey—track smarter, train harder, and thrive.</p>
+            </div>
+            <div>
+                <img src="https://cdn.prod.website-files.com/5fe33d036237252135e3e74d/6250389b084f8bc22025a4a1_Man%20working%20out%20in%20the%20gym.jpg" alt="Workout img">
+            </div>
+        </section>
+
+        <div class="services">
+            <h2>Master Your Fitness</h2>
+            <div class="services-content">
+                <div class="service">
+                    <img src="https://img.freepik.com/free-vector/social-distance-gym_23-2148576552.jpg" alt="Workout plans">
+                    <h3>Workout Plans</h3>
+                    <p>"Killer workout plans that push your limits" — evokes intensity and customization.</p>
+                </div>
+                <div class="service">
+                    <img src="https://www.shutterstock.com/image-vector/healthy-meal-breakfast-dinner-vector-600nw-2351818317.jpg" alt="diet plan img">
+                    <h3>Diet Plans</h3>
+                    <p>"Fuel up with diet plans that hit all the right macros" — ties nutrition to performance.</p>
+                </div>
+                <div class="service">
+                    <img src="https://t4.ftcdn.net/jpg/05/85/98/23/360_F_585982323_yznowgNy08XggZGpEanOUgoBfq2ECTgD.jpg" alt="progress tracker img">
+                    <h3>Progress Tracker</h3>
+                    <p>"Track your progress like a pro" — emphasizes precision and mastery.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fit-form">
+            <h2>Discover Your Fitness Starting Point</h2>
+            <p>Take this quick quiz to calculate your physique and tell your goals to kickstart your journey with personalized insights!</p>
+            <button class="btn" onclick="showpopup()">Take Quiz ></button>
+        </div>
+    
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <form id="fitness-form">
+                    <h2 style="text-align: center; margin-bottom: 25px; color: #101820;">Fitness Assessment</h2>
+    
+                    <div class="form-group">
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fname" name="full_name" placeholder="Your Full Name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Your Age" min="13" max="120" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Country" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Physique Measurements</label>
+                        <div style="display: grid; gap: 15px;">
+                            <input type="number" name="height" placeholder="Height (cm)" min="50" step="0.1" required>
+                            <input type="number" name="weight" placeholder="Weight (kg)" min="20" step="0.1" required>
+                            <input type="number" name="waist" placeholder="Waist (cm)" min="20" step="0.1" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Fitness Goal</label>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" id="gain" name="goal" value="gain_weight" required>
+                                <label for="gain">Gain Weight</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="lose" name="goal" value="lose_weight">
+                                <label for="lose">Lose Weight</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="fit" name="goal" value="get_fit">
+                                <label for="fit">Get Fit</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="muscle" name="goal" value="build_muscle">
+                                <label for="muscle">Build Muscle</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <button type="submit" id="submit-btn"  onclick="submitform()">Submit</button>
+                    <button type="button" id="close-btn" onclick="hidepopup()">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="review-section">
+            <div class="reviews">
+                <h2>Hear from the trusted ones.</h2>
+                <div class="review">
+                    <p>FitPulse is a game-changer for my fitness journey!</p>
+                    <h3>Jane Smith</h3>
+                </div>
+                <div class="review">
+                    <p>"The personalized plans and progress tracker are amazing. I've never felt more motivated!"</p>
+                    <h3>Sania Ali</h3>
+                </div>
+                <div class="review">
+                    <p>"FitPulse helped me achieve my fitness goals faster than I ever imagined. Highly recommend it!"</p>
+                    <h3>Mike Zoe</h3>
+                </div>
+                <div class="review">
+                    <p>"FitPulse is the best fitness platform I've ever used. It's a must-have for anyone serious about fitness."</p>
+                    <h3>Emily Parker</h3>
+                </div>
+                <div class="review">
+                    <p>FitPulse fits perfectly into my busy schedule</p>
+                    <h3>Hanzilla Ahmed</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="follow-us">
+            <div class="follow-container">
+                <h2>Follow Us</h2>
+                <p>Stay updated with the latest fitness tips, news, and community events.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" id="fb"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/in/maryiam-hassan-67595228b/" id="linkedin"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtPfjrH0E4d3tCYp_40GwoNFaQtSuqkglhyQ&s" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/" id="insta"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/" id="yt"><img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube"></a>
+                </div>
+            </div>    
+        </section>
+
+        <footer>
+            <p>&copy; 2025 FitPulse. All rights reserved.</p>
+            <p>Developed with &hearts; by Maryiam Hassan </p>
+        </footer>
+    
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
